@@ -1,37 +1,77 @@
-<!Doctype>
-<html>
-<head>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div id="wrapper">
-       		<div class="container">
-			<h1> My Gallery </h1>
-			<div class="gallery">
-				<figure class="card">
-				<img src="a.jpeg">
-				<figcaption>Image 1 </figcaption>
-				</figure>
-				<figure class="card">
-				<img src="b.jpeg">
-				<figcaption>Image 2 </figcaption>
-				</figure>
-				<figure class="card">
-				<img src="c.jpeg">
-				<figcaption>Image 3 </figcaption>
-				</figure>
-				<figure class="card">
-				<img src="d.jpeg">
-				<figcaption>Image 4 </figcaption>
-				</figure>
-				<figure class="card">
-				<img src="f.png">
-				<figcaption>Image 5 </figcaption>
-				</figure>
-				<figure class="card">
-				<img src="e.jpeg">
-				<figcaption>Image 6 </figcaption>
-				</figure>
-			</div>
-		</div>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="slick.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="gallery-section">
+        <div class="container">
+          <h1>My Gallery</h1>
+          <div class="gallery-slider">
+            <div class="gallery-slide">
+              <figure class="card">
+                <img src="a.jpeg" alt="img-1" />
+                <figcaption>Image 1</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-slide">
+              <figure class="card">
+                <img src="b.jpeg" alt="img-2" />
+                <figcaption>Image 2</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-slide">
+              <figure class="card">
+                <img src="c.jpeg" alt="img-3" />
+                <figcaption>Image 3</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-slide">
+              <figure class="card">
+                <img src="d.jpeg" alt="img-4" />
+                <figcaption>Image 4</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-slide">
+              <figure class="card">
+                <img src="f.png" alt="img-5" />
+                <figcaption>Image 5</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-slide">
+              <figure class="card">
+                <img src="e.jpeg" alt="img-6" />
+                <figcaption>Image 6</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="slick.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.gallery-slider').slick({
+			slidesToShow: 3,
+            slidesToScroll: 1,
+			arrows: true,
+			responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }, 
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>
